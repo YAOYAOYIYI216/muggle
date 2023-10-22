@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>第二题</title>
+    <style>
+        .side-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 20vw;
+            background-color: #fff;
+            border-right: 1px dashed rgba(0, 0, 0, .4);
+            display: flex;
+            flex-direction: column;
+            overflow: auto;
+            justify-content: center;
+        }
+        .side-bar a {
+            margin: 10px auto;
+            border-bottom: 1px dashed rgba(0, 0, 0, .4);
+            width: 90%;
+            text-decoration: none;
+            height: 20px;
+            text-align: center;
+            line-height: 10px;
+        }
+        .content {
+            position: absolute;
+            width: 70vw;
+            right: 0;
+            top: 0;
+        }
+        h1 {
+            border-bottom: 2px solid rgba(0, 0, 0, .3);
+            text-align: center;
+            height: 30px;
+            line-height: 15px;
+            margin-bottom: 40px;
+        }
+        h2 {
+            border-left: 6px solid #0084FF88;
+            padding: 5px;
+            font-size: 1.4em;
+            color: #555555;
+        }
+        h3 {
+            font-size: 1em;
+            color: #888888;
+            margin-left: 40px;
+        }
+       
+        .content a {
+            display: block;
+            text-align: center;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+<!--// 这里是sidebar，也就是侧边栏，a标签都要放在这里-->
+<section class="side-bar">
+    <a href="#main-skills">main-skills</a>
+    <a href="#frame">frame</a>
+    <a href="#pack-tools">pack-tools</a>
+    <a href="#develop-tools">develop-tools</a>
+    <a href="#browser">browser</a>
+</section>
+
+<section class="content">
+<!--    // 这里是content，基本不需要你们改了-->
+<!--    // 只要在后面加一个“点我获得更多资源”按钮-->
+
+    <h1 id="title">WEB前端の学习指南</h1>
+
+    <h2 id="main-skills">三件套</h2>
+    <h3 id="html">HTML</h3>
+    <h3 id="css">CSS</h3>
+    <h3 id="javascript">JavaScript</h3>
+
+    <h2 id="frame">框架</h2>
+    <h3 id="react">React.js</h3>
+    <h3 id="vue">Vue.js</h3>
+    <h3 id="angular">Angular.js</h3>
+
+    <h2 id="pack-tools">打包工具</h2>
+    <h3 id="webpack">Webpack</h3>
+    <h3 id="vite">Vite</h3>
+
+    <h2 id="develop-tools">开发工具</h2>
+    <h3 id="echarts">E-Charts (百度的开源图表库！百度终于干点人事)</h3>
+    <h3 id="ant-d">Ant-Design (阿里的开源组件库！)</h3>
+
+    <h2 id="browser">浏览器执行原理</h2>
+
+    <h2 id="more">...还有很多哦，加油机试，进来这些哥们全都教！(除了Angular)</h2>
+<!--    // 还剩一个“点我获得更多资源”按钮，记住，要新建一个标签页，并且跳转到木犀101（https://muxi-studio.github.io/101/）-->
+<a href="https://muxi-studio.github.io/101/" target="_blank" >点我获得更多资源</a>
+</section>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第八题</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            color: #fff;
+        }
+
+        header {
+            background-color: #df8f0e;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        header :hover {
+            cursor: pointer;
+        }
+
+        header a {
+            text-decoration: none;
+        }
+
+        header a:hover {
+            text-decoration: underline;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 35px;
+            padding: 0;
+            display: flex;
+        }
+
+        header li {
+            margin-left: 50px;
+        }
+
+        .hamburger {
+            display: none;
+        }
+
+        h2 {
+            display: inline-block;
+            height: 95px;
+            width: 20%;
+            text-align: center;
+            line-height: 95px;
+        }
+
+        section {
+
+            text-align: center;
+            background-color: #615a48;
+            padding: 30px 0 20px 50px;
+            height: 940px;
+            width: 100%;
+        }
+
+
+        .text {
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-top: 100px;
+            margin-bottom: 100px;
+            text-align: left;
+            width: max-content;
+        }
+
+        .know {
+            display: inline;
+            padding: 10px;
+            height: 50px;
+            border: 1px solid #fff;
+            border-radius: 7%;
+        }
+
+        footer {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+        }
+
+        @media screen and (max-width: 600px) {
+            header {
+                display: flex;
+                align-items: center;
+            }
+
+
+
+            .hamburger {
+                display: inline-block;
+                display: block;
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 2.5vh;
+            }
+
+            ul li {
+                display: none;
+                margin-left: 0;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <header>
+            <label class="hamburger">&#9776</label>
+            <h2>木犀前端</h2>
+            <ul>
+                <li><a href="#">最新消息</a></li>
+                <li><a href="#">关于我们</a></li>
+                <li><a href="#">组员列表</a></li>
+                <li><a href="#">学习规划</a></li>
+            </ul>
+        </header>
+
+    </div>
+    <section>
+        <div class="h1">
+            <h1>欢迎来到木犀2023秋招机试!</h1>
+        </div>
+        <div class="text">
+            我将作为困难题的一员来防守<br>
+            有看第三次直播或翻过我给的文档这题应该对你来说非常EZ<br>
+            目标是实现响应式导航栏,下面两块就当做加分题<br>
+        </div>
+
+        <div class="know"><a href="#">了解更多</a></div>
+    </section>
+    <footer>
+        Copyright @ 2023 木犀前端 All Rights Reserved.
+    </footer>
+
+</body>
+
+</html>

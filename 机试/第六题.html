@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第六题</title>
+    <style>
+        .main {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            gap: 15px;
+            grid-template-areas: 'a b b' 'c b b' 'c d e' 'c d f';
+            height: 400px;
+            width: 600px;
+            text-align: center;
+            border: 5px solid transparent;
+        }
+
+        div[class^=item] {
+            font-size: 50px;
+            color: #fff;
+        }
+
+        .item1 {
+            background-color: #5ec7ae;
+        }
+
+        .item2 {
+            background-color: #99c5b6;
+            grid-column-start: 2;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+
+        .item3 {
+            background-color: #ceba7d;
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 2;
+            grid-row-end: 5;
+        }
+
+        .item4 {
+            background-color: #c6e6e8;
+        }
+
+        .item5 {
+            background-color: #e3cfb0;
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 3;
+            grid-row-end: 5;
+        }
+
+        .item6 {
+            background-color: #e3b0a1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="item1">One</div>
+        <div class="item2">Two</div>
+        <div class="item3">Three</div>
+        <div class="item4">Four</div>
+        <div class="item5">Five</div>
+        <div class="item6">Six</div>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第一题</title>
+    <style>
+        div {
+            position: absolute;
+            overflow: scroll;
+            height: 80%;
+            width: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, .3);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        input[type=text] {
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, .3);
+        }
+
+        textarea {
+            height: 150px;
+            width: 400px;
+            resize: none;
+        }
+
+        .botton {
+            position: fixed;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: block;
+            height: 50px;
+            width: 200px;
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            line-height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <form>
+            <h1>招新的表单</h1>
+            <p>姓名:</p>
+            <p><input type="text" /></p>
+            <p>爱好:<input type="checkbox" name="hobby" disabled="disabled" />睡觉
+                <input type="checkbox" name="hobby" />学前端
+                <input type="checkbox" name="hobby" />吃吃吃
+            </p>
+            <p>
+                性别:<input type="radio" name="sex" />男
+                <input type="radio" name="sex" />女
+                <input type="radio" name="sex" />武装直升机
+            </p>
+            <p>
+                评论:
+            </p>
+            <p>
+                <textarea></textarea>
+            </p>
+            <botton class="botton">提交</botton>
+
+        </form>
+    </div>
+</body>
+
+</html>
