@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .baba {
+            position: absolute;
+            overflow: hidden;
+            height: 600px;
+            width: 600px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            background-color: #ccc;
+        }
+
+        .box1,
+        .box2 {
+
+            width: 200px;
+            height: 200px;
+            background-color: #fc0;
+
+        }
+
+        .box1 {
+            position: absolute;
+            top: -100px;
+            left: -100px;
+            border-radius: 50%;
+        }
+
+        .box2 {
+            position: absolute;
+            right: -100px;
+            bottom: -100px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="baba">
+        <div class="box1"></div>
+        <div class="box2"></div>
+    </div>
+
+</body>
+
+</html>
