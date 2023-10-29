@@ -6,8 +6,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        input[type="radio"] {
+            position: relative;
+            border: 1px solid transparent;
+            cursor: pointer;
+
+
+        }
+
+        input[type="radio"]::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 15px;
+            width: 15px;
+            background-color: white;
+            border-radius: 50%;
+            border: 1px solid black;
+           
+        }
+
+        input[type="radio"]:checked::after {
+            position: absolute;
+            top: 3.5px;
+            left: 3.5px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            content: '';
+            background-color: #d056b5;
+            border: 1px solid black;
+        }
+
+        input[type=checkbox] {
+            cursor: pointer;
+            position: relative;
+            width: 15px;
+            height: 15px;
+
+        }
+
+        input[type=checkbox]::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 15px;
+            height: 15px;
+            content: ' ';
+
+        }
+
+        input[type=checkbox]:checked::after {
+            content: "✓";
+            color: #fff;
+            text-align: center;
+            background-color: #d056b5;
+
+
+
+        }
+
         button {
-            background-color:#d056b5;
+            background-color: #d056b5;
             width: 100px;
             height: 30px;
             color: white;
