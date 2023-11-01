@@ -1,0 +1,387 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+.w {
+    width: 1000px;
+    margin: auto;
+    background-color: white;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: 0;
+    outline: none;
+    background-color: transparent;
+    color: white;
+}
+
+.header {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    padding: 10px 0;
+
+
+}
+
+.logo {
+
+    width: 94px;
+    height: 37px;
+    margin-top: 8px;
+    padding: 20px 0;
+}
+
+.nav {
+
+    margin-left: 55px;
+}
+
+.nav ul {
+    display: flex;
+}
+
+.nav ul li {
+
+    margin: 0 33px;
+}
+
+.nav ul li a {
+    display: block;
+    height: 80px;
+    padding: 0 5px;
+    line-height: 80px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #f5554a;
+    border-top: 5px solid transparent;
+
+
+}
+
+.nav ul li a:hover {
+    border-top: 5px solid #f5554a;
+}
+
+.search {
+
+    margin-left: 35px;
+    padding: 20px 0;
+    height: 80px;
+    width: 330px;
+}
+
+.search input {
+    float: left;
+    width: 248px;
+    height: 30px;
+    margin-top: 10px;
+    border: 2px solid #f44336;
+    border-right: 0;
+}
+
+.search button {
+
+    width: 80px;
+    height: 34px;
+    margin-top: 10px;
+    border: 0;
+    background: url(images/学而3.png) no-repeat;
+}
+
+.user {
+    width: 44px;
+    height: 44px;
+    padding: 20px 0;
+    margin-top: 5px;
+    margin-left: 60px;
+}
+
+.exit {
+    width: 95px;
+    height: 34px;
+    margin-top: 28px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    background-color: #1dc091;
+    line-height: 34px;
+    text-align: center;
+}
+
+.focus {
+    padding-top: 100px;
+}
+
+.main1 .head {
+    display: flex;
+    justify-content: space-around;
+}
+
+.main1 .head>div {
+    color: #1dc091;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #1dc091;
+    text-align: center;
+    line-height: 100px;
+    font-size: 30px;
+    margin: 30px auto;
+}
+
+.main1 .head>div:hover {
+    background-color: #1dc091;
+    color: white;
+}
+
+.main1 .body {
+    display: flex;
+    justify-content: space-around;
+}
+
+.main1 .body ul {
+    margin-left: 20px;
+    padding: 0 40px;
+    height: 135px;
+    border-right: 1px solid #8d8d8d;
+}
+
+.main1 .body ul:nth-child(4) {
+    border-right: 0;
+}
+
+/* 让最右边的盒子右边框消失 */
+
+.main1 .body ul li {
+    list-style-type: disc;
+    /* 让li的圆点显示出来,最上面设置了li的样式消失 */
+}
+
+.main1 .body ul li span:nth-child(odd) {
+    display: block;
+    font-size: 18px;
+}
+
+.main1 .body ul li span:nth-child(even) {
+    display: block;
+    font-size: 14px;
+    color: #8d8d8d;
+}
+
+.main1 .body ul li:hover {
+    color: #f44336;
+}
+
+.main1 .body ul li:hover span {
+    color: #f44336;
+}
+
+/* 为什么hover后面加了span就可以一起变红,不加这句话下面的小字就无法变色? */
+/* hover前面是指到哪里,hover后面是指到时改变样式的对象 */
+
+.main1 .foot {
+    display: flex;
+    justify-content: space-around;
+}
+
+.main1 .foot div {
+    width: 25px;
+    height: 25px;
+    margin-top: 35px;
+    margin-bottom: 55px;
+    border-radius: 50%;
+    border: 2px solid #26c395;
+    text-align: center;
+    line-height: 19px;
+    text-indent: -5px;
+    font-weight: 100;
+    color: #26c395;
+    font-size: 50px;
+    /* 加号改变字体大小的中心点不在几何中心 */
+}
+
+.main2 {
+    margin-top: 10px;
+}
+
+.main2 .head {
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+}
+
+.main2 .head h4 {
+    height: 10px;
+    margin-bottom: 10px;
+}
+
+.main2 .head h6 {
+    font-size: 10px;
+    color: #26c395;
+}
+
+.main2 .body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 150px;
+    padding-bottom: 100px;
+}
+
+.main2 .body div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 垂直居中不能用line-height,因为是多行文字 */
+    width: 134px;
+    height: 107px;
+    text-align: center;
+}
+
+.main2 .body div:nth-child(odd) {
+    border: #1dc091 2px solid;
+    margin: -1px 0;
+    /* 为什么左右的margin是0呢 */
+    /* 为什么不能用padding撑开呢 */
+    color: #9c9c9c;
+}
+
+.main2 .body div:nth-child(even) {
+    text-decoration: underline;
+    font-size: 50px;
+    color: #f44336;
+}
+
+.main2 .body div:nth-child(odd):hover {
+    background-color: #1dc091;
+    color: white;
+}
+
+.main3 {
+    margin-top: 10px;
+}
+
+.main3 .head {
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    margin-bottom: 40px;
+}
+
+.main3 .head h4 {
+    height: 10px;
+    margin-bottom: 10px;
+}
+
+.main3 .head h6 {
+    font-size: 10px;
+    color: #26c395;
+}
+
+.main3 .body {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+.main3 .body>div {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* 为了让span竖着排列 */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 175px;
+    height: 105px;
+    margin: auto 10px;
+    margin-bottom: 150px;
+    background-color: #f77b72;
+    color: white;
+
+}
+
+.main3 .body>div>div:nth-child(1) {
+    visibility: hidden;
+    position: absolute;
+    /* display: none; */
+    /* display会出现的问题-----display隐藏显示元素会破坏transition */
+    opacity: 0;
+
+}
+
+.main3 .body>div>div:nth-child(2) {
+    font-size: 18px;
+
+}
+
+.main3 .body>div>div:nth-child(3) {
+    font-size: 12px;
+
+}
+
+.main3 .body>div:hover {
+    background-color: #f44336;
+}
+
+.main3 .body>div:hover>div:nth-child(1) {
+    visibility: visible;
+    /* display: block; */
+    opacity: 1;
+    position: absolute;
+    top: -33px;
+    /* left: 55.5px;这两个参数直接算出来硬调 */
+    /* visibility出现的问题-----怎么使其在父盒子内部隐藏 */
+    transition: all 2s;
+    /* 把transition设在hover里就不会有淡出的效果,设在元素本身里面就会有淡出效果但不能隐藏 */
+}
+
+.footer {
+    width: 100%;
+    background-color: #333333;
+    padding: 35px 0;
+}
+
+.footer .picture {
+    margin: auto;
+    width: 300px;
+    height: 30px;
+    border-bottom: 2px solid #9b9b9b;
+    background: url(images/学而7.png) no-repeat center bottom;
+}
+
+.footer .word {
+    text-align: center;
+    font-size: 10px;
+    color: #9b9b9b;
+}
+
+.footer .word div {
+    display: inline-block;
+    /* 设置这个的时候一定要看清对象,不可继承 */
+}
+
+.footer .word .middle {
+    height: 5px;
+    width: 2px;
+    margin: auto 5px;
+    background-color: #ea5a70;
+}
