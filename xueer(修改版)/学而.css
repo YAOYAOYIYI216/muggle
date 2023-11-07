@@ -1,0 +1,594 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+.w {
+    width: 1000px;
+    margin: auto;
+    background-color: white;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: 0;
+    outline: none;
+    background-color: transparent;
+    color: white;
+}
+
+.header {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    padding: 10px 0;
+    z-index: 1;
+
+}
+
+.logo {
+
+    width: 94px;
+    height: 37px;
+    margin-top: 8px;
+    padding: 20px 0;
+}
+
+
+.navbar {
+    margin-left: 50px;
+    display: none;
+}
+
+.hamburger-menu {
+    background-color: #0a6048;
+    color: #fff;
+    /* display: none; */
+    cursor: pointer;
+    font-size: 18px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin: auto 30px;
+    margin-top: 32px;
+    transition: all .3s;
+}
+
+.menu {
+
+    background-color: #0a6048;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 30px;
+    z-index: 2;
+    /* 使其覆盖下面的内容,不把下面的图片顶下去 */
+    /* li默认就是竖着排的,不用搞那些复杂的布局,移位置也可以只用transform */
+}
+
+
+
+.menu a {
+    color: white;
+    /* a设置颜色一定要单独设置!!! */
+    width: 220px;
+    height: 60px;
+
+}
+
+.nav {
+
+    margin-left: 55px;
+}
+
+.nav ul {
+    display: flex;
+}
+
+.nav ul li {
+
+    margin: 0 33px;
+}
+
+.nav ul li a {
+    display: block;
+    height: 80px;
+    padding: 0 5px;
+    line-height: 80px;
+    font-size: 18px;
+    font-weight: 700;
+    color: black;
+    border-top: 5px solid transparent;
+
+
+}
+
+.nav ul li a:hover {
+    border-top: 5px solid #f5554a;
+    color: #f5554a;
+}
+
+.search {
+    margin-left: 35px;
+    padding: 20px 0;
+    height: 80px;
+    width: 330px;
+}
+
+.search input {
+    float: left;
+    width: 248px;
+    height: 29px;
+    margin-top: 10px;
+    border: 2px solid #f44336;
+    border-right: 0;
+    outline: none;
+}
+
+.search button {
+
+    width: 80px;
+    height: 36px;
+    margin-top: 10px;
+    border: 0;
+    background: url(images/学而3.png) no-repeat;
+}
+
+.user {
+    width: 44px;
+    height: 44px;
+    padding: 20px 0;
+    margin-top: 5px;
+    margin-left: 60px;
+}
+
+.exit {
+    width: 95px;
+    height: 34px;
+    margin-top: 28px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    background-color: #1dc091;
+    line-height: 34px;
+    text-align: center;
+}
+
+.focus {
+    position: relative;
+
+}
+
+/* 手动轮播样式 */
+.banner-container {
+    width: 1000px;
+    height: 500px;
+    margin: 1rem auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner-container .banner-img-container {
+    width: 3000px;
+    height: 500px;
+    overflow: hidden;
+    position: absolute;
+    display: flex;
+    transition: all 0.6s ease;
+    animation: run 10s ease infinite;
+}
+
+.banner-container .banner-img-container img {
+    width: 100%;
+    height: 100%;
+}
+
+/* 轮播图圆点样式 */
+.banner-container a {
+    width: 10px;
+    height: 10px;
+    background: #ccc;
+    position: absolute;
+    bottom: 1rem;
+    border-radius: 50%;
+    margin: 0;
+    z-index: 1;
+}
+
+.banner-container input {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    bottom: 1rem;
+    margin: 0;
+    cursor: pointer;
+    z-index: 2;
+    opacity: 0;
+    /* 用input去覆盖a */
+}
+
+/* 设置导航圆点位置*/
+#banner-control-1,
+#banner-control-1+.banner-nav-a {
+    left: 45%;
+}
+
+#banner-control-2,
+#banner-control-2+.banner-nav-a {
+    left: 50%;
+}
+
+#banner-control-3,
+#banner-control-3+.banner-nav-a {
+    left: 55%;
+}
+
+input:checked+.banner-nav-a {
+    background-color: #ad244f;
+}
+
+/* 点中之后效果 */
+#banner-control-1:checked~.banner-img-container {
+    transform: translateX(0px);
+}
+
+#banner-control-2:checked~.banner-img-container {
+    transform: translateX(-1000px);
+}
+
+#banner-control-3:checked~.banner-img-container {
+    transform: translateX(-2000px);
+}
+
+/* #banner-control-1:hover~.banner-img-container {
+    transform: translateX(0px);
+}
+
+#banner-control-2:hover~.banner-img-container {
+    transform: translateX(-1000px);
+}
+
+#banner-control-3:hover~.banner-img-container {
+    transform: translateX(-2000px);
+} */
+/* 为什么hover不管用啊啊啊啊啊啊啊啊啊? */
+@keyframes run {
+
+    0%,
+    20% {
+        transform: translateX(0);
+    }
+
+    30%,
+    50% {
+        transform: translateX(-1000px);
+    }
+
+    60%,
+    80% {
+        transform: translateX(-2000px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+/* 啊我的手动轮播和自动轮播总要死掉一个,为什么啊啊啊啊啊啊? */
+
+.main1 .head {
+    display: flex;
+    justify-content: space-around;
+}
+
+.main1 .head>div {
+    color: #1dc091;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #1dc091;
+    text-align: center;
+    line-height: 100px;
+    font-size: 30px;
+    margin: 30px auto;
+}
+
+.main1 .head>div:hover {
+    background-color: #1dc091;
+    color: white;
+}
+
+.main1 .body {
+    display: flex;
+    justify-content: space-around;
+}
+
+.main1 .body ul {
+    margin-left: 20px;
+    padding: 0 40px;
+    height: 135px;
+    border-right: 1px solid #8d8d8d;
+}
+
+.main1 .body ul:nth-child(4) {
+    border-right: 0;
+}
+
+/* 让最右边的盒子右边框消失 */
+
+.main1 .body ul li {
+    list-style-type: disc;
+    /* 让li的圆点显示出来,最上面设置了li的样式消失 */
+}
+
+.main1 .body ul li span:nth-child(odd) {
+    display: block;
+    font-size: 18px;
+}
+
+.main1 .body ul li span:nth-child(even) {
+    display: block;
+    font-size: 14px;
+    color: #8d8d8d;
+}
+
+.main1 .body ul li:hover {
+    color: #f44336;
+}
+
+.main1 .body ul li:hover span {
+    color: #f44336;
+}
+
+/* 为什么hover后面加了span就可以一起变红,不加这句话下面的小字就无法变色? */
+/* hover前面是指到哪里,hover后面是指到时改变样式的对象 */
+
+.main1 .foot {
+    display: flex;
+    justify-content: space-around;
+}
+
+.main1 .foot div {
+    width: 25px;
+    height: 25px;
+    margin-top: 35px;
+    margin-bottom: 55px;
+    border-radius: 50%;
+    border: 2px solid #26c395;
+    text-align: center;
+    line-height: 19px;
+    text-indent: -5px;
+    font-weight: 100;
+    color: #26c395;
+    font-size: 50px;
+    /* 加号改变字体大小的中心点不在几何中心 */
+}
+
+.main2 {
+    margin-top: 10px;
+}
+
+.main2 .head {
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+}
+
+.main2 .head h4 {
+    height: 10px;
+    margin-bottom: 10px;
+}
+
+.main2 .head h6 {
+    font-size: 10px;
+    color: #26c395;
+}
+
+.main2 .body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 150px;
+    padding-bottom: 100px;
+}
+
+.main2 .body div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 垂直居中不能用line-height,因为是多行文字 */
+    width: 134px;
+    height: 107px;
+    text-align: center;
+}
+
+.main2 .body div:nth-child(odd) {
+    border: #1dc091 2px solid;
+    margin: -1px 0;
+    /* 为什么左右的margin是0呢 */
+    /* 为什么不能用padding撑开呢 */
+    color: #9c9c9c;
+}
+
+.main2 .body div:nth-child(even) {
+    text-decoration: underline;
+    font-size: 50px;
+    color: #f44336;
+}
+
+.main2 .body div:nth-child(odd):hover {
+    background-color: #1dc091;
+    color: white;
+}
+
+.main3 {
+    margin-top: 10px;
+}
+
+.main3 .head {
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    margin-bottom: 40px;
+}
+
+.main3 .head h4 {
+    height: 10px;
+    margin-bottom: 10px;
+}
+
+.main3 .head h6 {
+    font-size: 10px;
+    color: #26c395;
+}
+
+.main3 .body {
+    display: flex;
+    justify-content: space-around;
+    /* margin-bottom: 200px; */
+}
+
+.main3 .body .box {
+    position: relative;
+    width: 175px;
+    height: 105px;
+    margin-bottom: 100px;
+}
+
+.main3 .body .box a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    width: 175px;
+    height: 105px;
+    margin: auto 10px;
+    margin-bottom: 150px;
+    background-color: #f77b72;
+    color: white;
+    text-align: center;
+    z-index: 0;
+}
+
+.main3 .body a:hover {
+    background-color: #f44336;
+}
+
+.main3 .body .box img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.main3 .body .box:hover img {
+    position: absolute;
+    top: -33px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 1s;
+    z-index: 1;
+}
+
+.main3 .body .box a {
+    z-index: 2;
+}
+
+.main3 .body .box a div:nth-child(1) {
+    display: block;
+    font-size: 18px;
+}
+
+.main3 .body .box a div:nth-child(2) {
+    display: block;
+    font-size: 12px;
+}
+
+.footer {
+    width: 100%;
+    background-color: #333333;
+    padding: 35px 0;
+}
+
+.footer .picture {
+    margin: auto;
+    width: 300px;
+    height: 30px;
+    border-bottom: 2px solid #9b9b9b;
+    background: url(images/学而7.png) no-repeat center bottom;
+}
+
+.footer .word {
+    text-align: center;
+    font-size: 10px;
+    color: #9b9b9b;
+}
+
+.footer .word div {
+    display: inline-block;
+    /* 设置这个的时候一定要看清对象,不可继承 */
+}
+
+.footer .word .middle {
+    height: 5px;
+    width: 2px;
+    margin: auto 5px;
+    background-color: #ea5a70;
+}
+
+@media screen and (max-width: 1200px) {
+    .header {
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar {
+        display: block;
+    }
+
+    .hamburger-menu {
+        margin-top: 65px;
+    }
+
+    .menu {
+        opacity: 0;
+        display: block;
+        transition: all .3s;
+    }
+
+    .menu li {
+        border: #f4f4f4 1px solid;
+    }
+
+    .navbar:hover .menu {
+        opacity: 1;
+    }
+
+    .search {
+        margin-top: 30px;
+    }
+
+    .header .nav li {
+        display: none;
+        margin-left: 0;
+    }
+
+    .exit {
+        display: none;
+    }
+}
