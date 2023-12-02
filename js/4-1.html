@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function range(start, end, step = 1) {
+        let result = []
+        let i = start
+
+        if (step > 0) {
+          while (i <= end) {
+            result[result.length] = i
+            i += step
+          }
+        } else {
+          while (i >= end) {
+            result[result.length] = i
+            i += step
+          }
+        }
+
+        return result
+      }
+
+      function sum(number) {
+        let t = 0
+        for (let i = 0; i < number.length; i++) {
+          t += number[i]
+        }
+        return t
+      }
+      let Range = range(1, 10)
+      console.log(Range)
+      console.log(sum(Range))
+      console.log(range(1, 10, 2))
+      console.log(range(5, 2, -1))
+
+  </script>
+</body>
+</html>
