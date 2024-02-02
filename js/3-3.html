@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function cntB(str) {
+        let count = 0
+        for (let i = 0; i < str.length; i++) {
+          if (str[i] === 'B') {
+            count++
+          }
+        }
+        return count
+      }
+
+      function cnt(str, char) {
+        let count = 0
+        for (let i = 0; i < str.length; i++) {
+          if (str[i] === char) {
+            count++
+          }
+        }
+        return count
+      }
+
+      let input = prompt('请输入一个字符串：')
+
+      if (input) {
+        console.log(`字符串中'B'的个数为：${cntB(input)}`)
+
+        let needcnt = prompt('请输入要计数的字符：')
+        if (needcnt) {
+          console.log(`字符串中字符'${needcnt}'的个数为：${cnt(input, needcnt)}`)
+        } else {
+          console.log('请输入有效的字符')
+        }
+      } else {
+        console.log('请输入有效的字符串')
+      }
+
+  </script>
+</body>
+</html>

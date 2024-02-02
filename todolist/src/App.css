@@ -1,0 +1,82 @@
+.wrapper {
+
+  width: 40vw;
+  
+  background-color: #eae7e6;
+  text-align: center;
+  margin: auto;
+}
+h1 {
+  padding-top: 20px;
+  font-size: 70px;
+  font-weight: 100;
+  color: #cfc9c9
+}
+.addTodo {
+  display: flex;
+}
+.todo {
+  list-style-type: none;
+  margin: 8px 0;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.todo.editing {
+  outline: none;
+  background-color: #cfc9c9;
+}
+
+.todo label {
+  display: flex;
+  align-items: center;
+}
+
+.todo input[type="radio"] {
+  margin-right: 8px;
+}
+
+.todo input[type="text"] {
+  flex: 1;
+  margin-right: 8px;
+}
+
+.todo button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #333;
+}
+.textfield {
+  height: 50px;
+  font-size: large;
+  outline: none;
+  flex-grow: 1;
+  margin-right: 10px;
+}
+.submit {
+  border: none;
+  padding: 5px 10px;
+}
+
+.todos {
+  list-style: none;
+  padding: 0;
+}
+.footer {
+  display: flex;
+}
+
+.footer button {
+  font-size: large;
+  flex: 1;
+  background-color: transparent;
+  border: none;
+}
+
+.todo.completed label {
+  text-decoration: line-through;
+}
