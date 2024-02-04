@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 export default function Header(props) {
   const [inputText, setInputText] = useState('');
-  const { addTodo } = props;
+  const { addTodo ,handleCompleted} = props;
 
   const onInput = (e) => {
     setInputText(e.target.value);
@@ -20,7 +20,9 @@ export default function Header(props) {
       onSubmit()
     }
   };
-
+  const handleAllCompleted = () => {
+    handleCompleted();
+  };
   return (
     <div>
       <h1>todos</h1>
@@ -32,7 +34,9 @@ export default function Header(props) {
           onChange={onInput}
           onKeyDown={onKeyDown}
         />
-        
+        <button className='submit' onClick={handleAllCompleted}>
+          all completed
+        </button>
       </div>
     </div>
   );

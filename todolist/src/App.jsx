@@ -71,10 +71,15 @@ export default function App() {
 
     setTodos(updateTodos);
   };
-
+  const handleCompleted = () => {
+    const updatedTodos = todos.map((todo) =>
+      todo.status === 'active' ? { ...todo, status: 'completed' } : todo
+    );
+    setTodos(updatedTodos);
+  };
   return (
     <div className='wrapper'>
-      <Header  addTodo={addTodo} />
+      <Header addTodo={addTodo} handleCompleted={handleCompleted }/>
       <List todos={todos} filter={filter} ifCompleted={ifCompleted} />
       <Footer todos={todos} filter={filter} setFilter={setFilter} clearCompleted={clearCompleted} />
     </div>
