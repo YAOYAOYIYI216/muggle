@@ -1,0 +1,17 @@
+
+.shop-container {
+  display: flex;
+  height: 100%;
+  overflow-y: auto;
+
+}
+
+.item-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item {
+  flex: 0 0 calc(25% - 10px);
+  margin: 5px;
+}
