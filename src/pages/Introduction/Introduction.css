@@ -1,15 +1,15 @@
 [class^="class"] {
   position: absolute;
-  width: 80px;
-  height: 40px;
+  width: 10vw;
+  height: 12vh;
 }
 .class1 {
-top: 200px;
-left: 190px;
+top: 62vh;
+left: 25vw;
 }
 .class2 {
-  top: 220px;
-  left: 230px;
+  top: 65vh;
+  left: 30vw;
 }
 .class3 {
   top: 200px;

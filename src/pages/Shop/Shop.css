@@ -1,17 +1,83 @@
-
-.shop-container {
+.header {
   display: flex;
-  height: 100%;
-  overflow-y: auto;
-
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  flex-direction: row;
+  background: #e8f7e2;
+  z-index: 1;
+}
+.backbutton {
+  position: absolute;
+  left: 3vw;
+  font-size: 2em;
+  color: #82c679;
+}
+.header-item {
+  margin-left: 15vw;
+  width: 5vw;
+  height: 14vh;
 }
 
-.item-list {
+.active {
+  border-bottom: solid 1vh black;
+}
+
+.main {
+  position: absolute;
+  top: 14vh;
+  background: url('./assets//pictures/background.png');
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-around;
+ 
 }
 
 .item {
-  flex: 0 0 calc(25% - 10px);
-  margin: 5px;
+  display: flex;
+  justify-content: center;
+  margin-top: 5vh;
+  margin-left: 3vw;
+ 
+  margin-bottom: 10px;
+ 
+}
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item-image {
+  width: 20vw;
+  height: 40vh;
+  border-radius: 8%;
+}
+
+.item-info {
+  background-color: #daf7d6;
+border-radius: 7%;
+padding: 2vh 1vw;
+box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.16), inset 0px 2px 3px 1px rgba(0, 0, 0, 0.16);
+  display: flex;
+  align-items: center;
+  margin-top: 3vh;
+  
+}
+
+.energy-icon {
+  width: 2vw;
+  height: 4vh;
+  margin-right: 1vw;
+
+}
+
+.price-text {
+  font-size: 4.5vh;
+  
 }

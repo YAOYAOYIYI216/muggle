@@ -5,8 +5,8 @@ import './Introduction.css';
 
 const Introduction = () => {
   const backgrounds = [
-    require('./assets/pictures/1.png'),
-    require('./assets/pictures/2.png'),
+    // require('./assets/pictures/1.png'),
+    // require('./assets/pictures/2.png'),
     require('./assets/pictures/3.png'),
     require('./assets/pictures/4.png'),
     require('./assets/pictures/5.png'),
@@ -17,8 +17,8 @@ const Introduction = () => {
   ];
 
   const classNames = [
-    'class1',
-    'class2',
+    // 'class1',
+    // 'class2',
     'class3',
     'class4',
     'class5',

@@ -1,0 +1,70 @@
+.main {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: url(../Home/assets/pictures/background.png);
+}
+.continent {
+  position: absolute;
+  top: 15vh;
+  left: 5vw;
+ 
+  
+}
+.image {
+  width: 40vw;
+  height: 80vh;
+}
+.icons-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: absolute;
+  left: 60vw;
+  top:3vh
+}
+.icon {
+  width: 5vw;
+  height: 14vh;
+  margin-left: 4vw;
+}
+.words {
+  position: absolute;
+  left: 40vw;
+  font-size: large;
+}
+.text {
+  display: block;
+  margin-top: 2vh;
+}
+.continent-info {
+  position: absolute;
+  top: 20vh;
+  left: 50vw;
+  width: 35vw;
+  height: 60vh;
+  background-color: #bae3ac;
+  border-radius: 15% 12%;
+}
+.name {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 10vh;
+  line-height: 10vh;
+  width: 15vw;
+  background-color: #eaf7fd;
+  text-align: center;
+  border-radius: 0 0 10% 10% ;
+}
+.main {
+position: absolute;
+top: 15vh;
+left: 3vw;
+}
+.icon2 {
+  width: 4vw;
+  height: 7vh;
+  vertical-align: middle;
+}

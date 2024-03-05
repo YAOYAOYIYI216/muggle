@@ -1,43 +1,33 @@
-import Taro from '@tarojs/taro';
 import { useState, useEffect } from 'react';
-import { View, Image } from '@tarojs/components';
+import ImageButton from './ImageButton';
 import PropTypes from 'prop-types';
 
-function Continent({ images, className, onClick, navigateTo, stateKey }) {
-  const [buttonImage, setButtonImage] = useState(images.default);
+function Continent({ images, state, onClick, navigateTo ,initialImage,className}) {
+  const [selectedImage, setSelectedImage] = useState(initialImage);
 
   useEffect(() => {
-    const states = Taro.getCurrentInstance().router?.states ||'1';
-    if (states && states[stateKey]) {
-      const selectedImage = images[states[stateKey]];
-      if (selectedImage) {
-        setButtonImage(selectedImage);
-      }
-    }
-  }, []);
-
-  const handleClick = () => {
-    if (onClick) {
-      onClick();
-    }
-    Taro.navigateTo({
-      url: navigateTo
-    });
-  };
+    // 监听传入的属性值变化，根据属性值选择对应的图片
+    setSelectedImage(images[state]);
+  }, [state, images]);
 
   return (
-    <View className={className} onClick={handleClick}>
-      <Image src={buttonImage}  />
-    </View>
+    <ImageButton
+      src={selectedImage}
+      onClick={onClick}
+      navigateTo={navigateTo}
+      className={className}
+    />
   );
 }
 
-ImageButton.propTypes = {
-  images: PropTypes.objectOf(PropTypes.string).isRequired,
-  className: PropTypes.string,
-  onClick: PropTypes.func,
-  navigateTo: PropTypes.string.isRequired,
-  paramKey: PropTypes.string.isRequired
+Continent.propTypes = {
+  images:PropTypes.object.isRequired, 
+  state:PropTypes.string.isRequired, 
+  onClick:PropTypes.func, 
+  navigateTo:PropTypes.string.isRequired, 
+  initialImage:PropTypes.object.isRequired,
+  className: PropTypes.string
 };
 
 export default Continent;
+

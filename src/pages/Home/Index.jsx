@@ -1,16 +1,22 @@
 import Taro from '@tarojs/taro';
 import { useState, useEffect } from 'react';
 import { View, Text, Image } from '@tarojs/components';
-import './Home.css'
-import ImageButton from './components/ImageButton';
 import Continent from './components/Continent';
+import ImageButton from './components/ImageButton';
+import More from './components/More';
+
+import './Home.css'
 
 
 function Home() {
   const [username, setUsername] = useState('');
   const [totalEnergy, setTotalEnergy] = useState(1000);
   const [remainingEnergy, setRemainingEnergy] = useState(1000);
+  const [isOpen, setIsOpen] = useState(false)
 
+  const toggleMore = () => {
+    setIsOpen(!isOpen)
+  }
   // useEffect(() => {
   //   fetchData();
   // }, []);
@@ -26,7 +32,10 @@ function Home() {
   //     console.error('Error fetching data:', error);
   //   }
   // };
-
+  const images1 = {
+    state1: require('./assets/pictures/1.1.png'),
+    // state2: require('./assets/image2.png'),
+  };
   return (
     <View className='body'>
       <View className='userinfo'>
@@ -34,20 +43,53 @@ function Home() {
           className='planet'
           src={require('./assets/pictures/planet.png')}></Image>
         <Text>我的星球名 : {username}</Text>
-        <Text>总能量值: {totalEnergy}</Text>
-        <Text>剩余能量值: {remainingEnergy}</Text>
+
+
+      </View>
+      <View>
+        <View className='totalenergy'>
+          <Image
+            className='energy'
+            src={require('./assets/pictures/energy.png')}></Image>
+          <Text>总能量值:</Text>
+          <View
+            style={{
+              'width': '49rpx',
+              'height': '17rpx',
+              'background': '#B5F0AE',
+              'boxShadow': '0rpx 3rpx 5rpx 1rpx rgba(0,0,0,0.16), inset 0rpx 3rpx 5rpx 1rpx rgba(0,0,0,0.16)',
+              'opacity': '0.5',
+              'borderRadius':'2em',
+              'marginLeft':'3.2em',
+              'textAlign':'center'
+            }}>{totalEnergy}</View>
+        </View>
+        <View className='remainingenergy'>
+          <Image
+            className='energy'
+            src={require('./assets/pictures/energy.png')}></Image>
+          <Text>剩余能量值:</Text>
+          <View
+            style={{
+              'width': '49rpx',
+              'height': '17rpx',
+              'background': '#B5F0AE',
+              'boxShadow': '0rpx 3rpx 5rpx 1rpx rgba(0,0,0,0.16), inset 0rpx 3rpx 5rpx 1rpx rgba(0,0,0,0.16)',
+              'opacity': '0.5',
+              'borderRadius': '2em',
+              'marginLeft': '3.2em',
+              'textAlign': 'center'
+            }}>{remainingEnergy}</View>
+        </View>
       </View>
       <View className='main'>
         <Continent
+          images={images1}
+          state="state1"
+          onClick={() => { }}
+          navigateTo="../pages/Continent/Index"
+          initialImage={require('./assets/pictures/1.1.png')}
           className='continent1'
-          images={{
-            1: require('./assets/pictures/1.1.png'),
-            // 2: require('./assets/pictures/1.2.png'),
-            // 3: require('./assets/pictures/1.3.png'),
-          }}
-          // navigateTo="../pages/"
-          //补完
-          stateKey="states"
         />
         <Continent className='continent2' />
         <Continent className='continent3' />
@@ -65,9 +107,12 @@ function Home() {
         <ImageButton src={require('./assets/pictures/share.png')}
           className="share"
           navigateTo="../pages/Share/Index" />
-        <ImageButton src={require('./assets/pictures/more.png')}
+        <Image src={require('./assets/pictures/more.png')}
           className="more"
-          navigateTo="../pages/More/Index" />
+          onClick={toggleMore} />
+      <View>
+          <More isOpen={isOpen} close={() => setIsOpen(false)} />
+      </View>
       </View>
       <View className='sidebar'>
         <ImageButton src={require('./assets/pictures/game.png')}
@@ -79,7 +124,7 @@ function Home() {
 
       </View>
 
-    </View>
+    </View >
   );
 }
 

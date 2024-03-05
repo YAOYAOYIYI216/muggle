@@ -11,10 +11,14 @@ function ImageButton({ src, className, onClick, navigateTo }) {
       url: navigateTo
     });
   };
-
+  
   return (
-    <View className={className} onClick={handleClick}>
-      <Image src={src}  />
+    <View 
+     
+    onClick={handleClick}>
+      <Image 
+        src={src} className={`navi-item ${className}`}
+         />
     </View>
   );
 }

@@ -1,15 +1,18 @@
 import Taro from '@tarojs/taro';
-import { View, Image } from '@tarojs/components';
-import backIcon from '../../assets/pictures/back.png'; 
+import { View, Text} from '@tarojs/components';
 
-function BackButton() {
+
+function BackButton({outlook}) {
   const handleClick = () => {
     Taro.navigateBack();
   };
 
   return (
-    <View onClick={handleClick}>
-      <Image src={backIcon} style={{ width: '20px', height: '20px' }} />
+    <View 
+    onClick={handleClick}
+    className='backbutton'
+    >
+      <Text>{outlook}</Text>
     </View>
   );
 }
